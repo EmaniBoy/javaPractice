@@ -24,7 +24,12 @@ public class main {
             case "1":
                 Calculator.main(new String[]{});
                 break;
-        
+            case "2":
+                RandNumGuess.main(new String[]{});
+                break;
+            case "3":
+                Todo.main(new String[]{});
+                break;
             default:
                 break;
             }

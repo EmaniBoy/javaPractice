@@ -27,7 +27,7 @@ public class BankMngmt {
 
         //withdraw
         public void withdraw(double amount){
-            if(balance <= amount && amount >= 0){
+            if(amount >= 0 && balance >= amount){
                 balance -= amount;
             } else {
                 System.out.println("thats not a valid withdraw amount");
@@ -77,7 +77,7 @@ public class BankMngmt {
 
             switch (choice) {
                 case 1:
-                    System.out.print("input initial balance: ");
+                    System.out.print("Input initial balance: ");
                     double initialBalance = keyboard.nextDouble();
                     BankAccount newAccount = new BankAccount(accountCounter++, initialBalance);
                     accounts.add(newAccount);
@@ -86,17 +86,51 @@ public class BankMngmt {
                     System.out.println("                                    "); 
                     break;
                 case 2:
-
+                    System.out.print("Enter account number: ");
+                    int accNumDeposit = keyboard.nextInt();
+                    BankAccount depositAccount = BankAccount.findAccount(accounts, accNumDeposit);
+                    if(depositAccount != null){
+                        System.out.print("Enter deposit number: ");
+                        double depositAmount = keyboard.nextDouble();
+                        depositAccount.deposit(depositAmount);
+                        System.out.println("Deposit Successful!");
+                        System.out.println("New balence: " + depositAccount.getBalance());
+                        System.out.println("                                    ");
+                    } else {
+                        System.out.println("Error invalid account number");
+                        System.out.println("                                    ");
+                    }
                     break;
                 case 3:
-
+                    System.out.print("Enter account number: ");
+                    int accNumWithdraw = keyboard.nextInt();
+                    BankAccount withdrawAccount = BankAccount.findAccount(accounts, accNumWithdraw);
+                    if(withdrawAccount != null){
+                        System.out.print("Enter withdraw amount: ");
+                        double withdrawAmount = keyboard.nextDouble();
+                        withdrawAccount.withdraw(withdrawAmount);
+                        System.out.println("Withdraw Successful!");
+                        System.out.println("New balence: " + withdrawAccount.getBalance());
+                        System.out.println("                                    ");
+                    } else {
+                        System.out.println("Error invalid account number");
+                        System.out.println("                                    ");
+                    }
                     break;
                 case 4:
-
+                    System.out.print("Enter account number: ");
+                    int accNumCheck = keyboard.nextInt();
+                    BankAccount balAccount = BankAccount.findAccount(accounts, accNumCheck);
+                    if(balAccount != null){
+                        System.out.println("Your current balance for account " + accNumCheck + ": " + balAccount.getBalance());
+                    } else {
+                        System.out.println("Error invalid account number");
+                    }
                     break;
                 case 5:
-
-                    break;
+                    System.out.println("Goodbye!");
+                    keyboard.close();
+                    return;
                 default:
                     System.out.println("thats not a valid choice");
                     break;
@@ -104,11 +138,6 @@ public class BankMngmt {
 
 
         }
-
-
-
-
-
 
 
         

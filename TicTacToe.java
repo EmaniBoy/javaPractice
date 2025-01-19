@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class TicTacToe {
     private static char[][] board = new char[3][3]; // 3x3 game board
-    private static char currentPlayer = 'X'; // Player X starts first
+    private static char currentPlayer = 'X'; 
 
     public static void main(String[] args) {
-        initializeBoard(); // Initialize the board with empty spaces
-        printBoard(); // Display the initial board
+        initializeBoard(); 
+        printBoard();
 
         Scanner scanner = new Scanner(System.in);
         boolean gameOver = false;
@@ -17,8 +17,8 @@ public class TicTacToe {
             int col = scanner.nextInt();
 
             if (isValidMove(row, col)) {
-                board[row][col] = currentPlayer; // Place the player's mark
-                printBoard(); // Display the updated board
+                board[row][col] = currentPlayer; 
+                printBoard();
 
                 if (checkWin()) {
                     System.out.println("Player " + currentPlayer + " wins!");
@@ -27,7 +27,7 @@ public class TicTacToe {
                     System.out.println("It's a draw!");
                     gameOver = true;
                 } else {
-                    switchPlayer(); // Switch to the other player
+                    switchPlayer(); 
                 }
             } else {
                 System.out.println("Invalid move! Try again.");
@@ -36,7 +36,7 @@ public class TicTacToe {
         scanner.close();
     }
 
-    // Initialize the board with empty spaces
+    
     private static void initializeBoard() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -45,7 +45,7 @@ public class TicTacToe {
         }
     }
 
-    // Print the current state of the board
+    
     private static void printBoard() {
         System.out.println("Current Board:");
         for (int i = 0; i < 3; i++) {
@@ -56,28 +56,28 @@ public class TicTacToe {
         }
     }
 
-    // Check if the move is valid
+    
     private static boolean isValidMove(int row, int col) {
         return row >= 0 && row < 3 && col >= 0 && col < 3 && board[row][col] == '-';
     }
 
-    // Check if the current player has won
+    
     private static boolean checkWin() {
-        // Check rows
+        
         for (int i = 0; i < 3; i++) {
             if (board[i][0] != '-' && board[i][0] == board[i][1] && board[i][1] == board[i][2]) {
                 return true;
             }
         }
 
-        // Check columns
+        
         for (int j = 0; j < 3; j++) {
             if (board[0][j] != '-' && board[0][j] == board[1][j] && board[1][j] == board[2][j]) {
                 return true;
             }
         }
 
-        // Check diagonals
+        
         if (board[0][0] != '-' && board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
             return true;
         }
@@ -88,7 +88,7 @@ public class TicTacToe {
         return false;
     }
 
-    // Check if the board is full (draw)
+    
     private static boolean isBoardFull() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -100,7 +100,7 @@ public class TicTacToe {
         return true;
     }
 
-    // Switch players between X and O
+    
     private static void switchPlayer() {
         currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
     }

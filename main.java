@@ -11,6 +11,9 @@ public class main {
         while (true) {
             // Display menu
             System.out.println(" _____________________________________");
+            System.out.println("|                                     |");                
+            System.out.println("|       WELCOME " + userName.toUpperCase() + "!         |");
+            System.out.println(" _____________________________________");
             System.out.println("|            MINI GAMES MENU          |");
             System.out.println("|-------------------------------------|");
             System.out.println("|    1. Calculator                    |");

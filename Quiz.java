@@ -16,37 +16,128 @@ public class Quiz {
     }
 
     public static void main(String[] args) {
-        
-        ArrayList<Question> quizQuestions = new ArrayList<>();
-        quizQuestions.add(new Question(
+
+
+        //general catagory
+        ArrayList<Question> GeneralquizQuestions = new ArrayList<>();
+        GeneralquizQuestions.add(new Question(
             "What is the capital of France?",
             new String[] {"A. Berlin", "B. Madrid", "C. Paris", "D. Rome"},
             'C'
         ));
-        quizQuestions.add(new Question(
+        GeneralquizQuestions.add(new Question(
             "Which planet is known as the Red Planet?",
             new String[] {"A. Earth", "B. Mars", "C. Jupiter", "D. Venus"},
             'B'
         ));
-        quizQuestions.add(new Question(
+        GeneralquizQuestions.add(new Question(
             "What is the largest ocean on Earth?",
             new String[] {"A. Atlantic Ocean", "B. Indian Ocean", "C. Pacific Ocean", "D. Arctic Ocean"},
             'C'
         ));
-        quizQuestions.add(new Question(
+        GeneralquizQuestions.add(new Question(
             "Who wrote the play 'Romeo and Juliet'?",
             new String[] {"A. William Wordsworth", "B. Charles Dickens", "C. William Shakespeare", "D. Mark Twain"},
             'C'
         ));
-        quizQuestions.add(new Question(
+        GeneralquizQuestions.add(new Question(
             "What is the smallest prime number?",
             new String[] {"A. 0", "B. 1", "C. 2", "D. 3"},
             'C'
         ));
         
+        //technology catagory
+        ArrayList<Question> TechnologyquizQuestions = new ArrayList<>();
+        TechnologyquizQuestions.add(new Question(
+            "What does HTML stand for?",
+            new String[] {"A. HyperText Markup Language", "B. HyperText Markdown Language", "C. HighText Markup Language", "D. Hyper Transfer Markup Language"},
+            'A'
+        ));
+        TechnologyquizQuestions.add(new Question(
+            "Who is known as the father of computers?",
+            new String[] {"A. Alan Turing", "B. Charles Babbage", "C. Ada Lovelace", "D. John von Neumann"},
+            'B'
+        ));
+        TechnologyquizQuestions.add(new Question(
+            "What does RAM stand for in computers?",
+            new String[] {"A. Random Access Memory", "B. Read-Only Memory", "C. Read and Access Memory", "D. Randomized Array Memory"},
+            'A'
+        ));
+        TechnologyquizQuestions.add(new Question(
+            "Which company developed the Windows operating system?",
+            new String[] {"A. Apple", "B. Microsoft", "C. IBM", "D. Google"},
+            'B'
+        ));
+        TechnologyquizQuestions.add(new Question(
+            "What is the name of the first electronic general-purpose computer?",
+            new String[] {"A. ENIAC", "B. UNIVAC", "C. Colossus", "D. IBM 701"},
+            'A'
+        ));
+
+
+        //science catagory
+        ArrayList<Question> ScienceQuizQuestions = new ArrayList<>();
+        ScienceQuizQuestions.add(new Question(
+            "What planet is known as the 'Red Planet'?",
+            new String[] {"A. Venus", "B. Mars", "C. Jupiter", "D. Mercury"},
+            'B'
+        ));
+        ScienceQuizQuestions.add(new Question(
+            "What is the chemical symbol for water?",
+            new String[] {"A. O2", "B. H2O", "C. CO2", "D. H2"},
+            'B'
+        ));
+        ScienceQuizQuestions.add(new Question(
+            "Which gas do plants primarily use during photosynthesis?",
+            new String[] {"A. Oxygen", "B. Nitrogen", "C. Carbon dioxide", "D. Hydrogen"},
+            'C'
+        ));
+        ScienceQuizQuestions.add(new Question(
+            "What is the closest star to Earth?",
+            new String[] {"A. Proxima Centauri", "B. Sirius", "C. Alpha Centauri", "D. The Sun"},
+            'D'
+        ));
+        ScienceQuizQuestions.add(new Question(
+            "What force keeps objects grounded on Earth?",
+            new String[] {"A. Friction", "B. Gravity", "C. Magnetism", "D. Inertia"},
+            'B'
+        ));
+
+        // History category
+        ArrayList<Question> HistoryQuizQuestions = new ArrayList<>();
+        HistoryQuizQuestions.add(new Question(
+            "Who was the first President of the United States?",
+            new String[] {"A. George Washington", "B. Thomas Jefferson", "C. John Adams", "D. Abraham Lincoln"},
+            'A'
+        ));
+        HistoryQuizQuestions.add(new Question(
+            "In which year did World War II end?",
+            new String[] {"A. 1942", "B. 1945", "C. 1948", "D. 1950"},
+            'B'
+        ));
+        HistoryQuizQuestions.add(new Question(
+            "What was the name of the ship that carried the Pilgrims to America in 1620?",
+            new String[] {"A. Santa Maria", "B. HMS Beagle", "C. Mayflower", "D. Titanic"},
+            'C'
+        ));
+        HistoryQuizQuestions.add(new Question(
+            "Which ancient civilization built the pyramids?",
+            new String[] {"A. Greeks", "B. Romans", "C. Egyptians", "D. Mesopotamians"},
+            'C'
+        ));
+        HistoryQuizQuestions.add(new Question(
+            "Who was known as the 'Maid of Orleans'?",
+            new String[] {"A. Joan of Arc", "B. Marie Antoinette", "C. Catherine the Great", "D. Eleanor of Aquitaine"},
+            'A'
+        ));
+
+
+
 
         Scanner keyboard = new Scanner(System.in);
         System.out.println("welcome to the quiz!");
         System.out.println("answer the following questions: ");
+
+
     }
 }

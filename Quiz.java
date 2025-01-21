@@ -195,7 +195,9 @@ public class Quiz {
         }
         System.out.println("\nYour final score is: " + score + "/" + selectedQuestions.size());
         System.out.println("Thanks for playing!");
-        keyboard.close();
+        System.out.println("Press Enter to return to the main menu.");
+        keyboard.nextLine();  // Wait for the user to press Enter
+        keyboard.nextLine();  // Consume the newline character
 
     }
 }

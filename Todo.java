@@ -51,9 +51,8 @@ public class Todo {
                     break;
 
                 case "4":
-                    System.out.println("exiting, goodbye");
-                    keyboard.close();
-                    break;
+                    System.out.println("Exiting To-Do List, returning to main menu...");
+                    return;
 
                 default:
                     System.out.println("thats not a valid choice");

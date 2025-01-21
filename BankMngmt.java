@@ -129,7 +129,9 @@ public class BankMngmt {
                     break;
                 case 5:
                     System.out.println("Goodbye!");
-                    keyboard.close();
+                    System.out.println("Press Enter to return to the main menu.");
+                    keyboard.nextLine();  // Wait for the user to press Enter
+                    keyboard.nextLine();  // Consume the newline character
                     return;
                 default:
                     System.out.println("thats not a valid choice");

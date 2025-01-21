@@ -42,6 +42,12 @@ public class Calculator{
                 System.out.println("thats not a valid operation");
                 break;
         }
-        keyboard.close();
+        
+        
+        System.out.println("Press Enter to return to the main menu.");
+        keyboard.nextLine();  // Wait for the user to press Enter
+        keyboard.nextLine();  // Consume the newline character
+
+        
     }
 }

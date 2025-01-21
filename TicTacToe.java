@@ -33,7 +33,9 @@ public class TicTacToe {
                 System.out.println("Invalid move! Try again.");
             }
         }
-        scanner.close();
+        System.out.println("Press Enter to return to the main menu.");
+        scanner.nextLine();  // Wait for the user to press Enter
+        scanner.nextLine();  // Consume the newline character
     }
 
     

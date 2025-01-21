@@ -167,6 +167,7 @@ public class Quiz {
                 break;
             case "D":
                 selectedQuestions = HistoryQuizQuestions;
+                break;
             default:
                 System.out.println("invalid choice. defaulting to general questions");
                 selectedQuestions = GeneralquizQuestions;

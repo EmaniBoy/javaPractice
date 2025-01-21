@@ -16,6 +16,10 @@ public class main {
         System.out.println("1. Calculator");
         System.out.println("2. Random Number Guess");
         System.out.println("3. To-Do List");
+        System.out.println("4. Random Dice Roller");
+        System.out.println("5. Bank Account Managment System");
+        System.out.println("6. Hangman");
+        System.out.println("7. Quiz Questions");
         System.out.println("4. Exit");
         String Option = keyboard.nextLine();
 

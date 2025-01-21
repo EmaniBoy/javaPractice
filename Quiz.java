@@ -13,7 +13,20 @@ public class Quiz {
             this.options = options;
             this.correctAnswer = correctAnswer;
         }
+
+        public String getQuestionText() {
+            return questionText;
+        }
+
+        public String[] getOptions() {
+            return options;
+        }
+
+        public char getCorrectAnswer() {
+            return correctAnswer;
+        }
     }
+
 
     public static void main(String[] args) {
 
@@ -131,13 +144,57 @@ public class Quiz {
             'A'
         ));
 
-
-
-
+        //game logic
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("welcome to the quiz!");
-        System.out.println("answer the following questions: ");
+        int score = 0;
 
+
+        System.out.println("welcome to the quiz!");
+        System.out.print("Pick a catagory of questions: A. General, B. Technology, C. Science, D. History (A/B/C/D): ");
+        String choice = keyboard.nextLine().toUpperCase();
+
+
+        ArrayList<Question> selectedQuestions;
+        switch (choice) {
+            case "A":
+                selectedQuestions = GeneralquizQuestions;
+                break;
+            case "B":
+                selectedQuestions = TechnologyquizQuestions;
+                break;
+            case "C":
+                selectedQuestions = ScienceQuizQuestions;
+                break;
+            case "D":
+                selectedQuestions = HistoryQuizQuestions;
+            default:
+                System.out.println("invalid choice. defaulting to general questions");
+                selectedQuestions = GeneralquizQuestions;
+                break;
+        }
+
+        for(int i = 0; i < selectedQuestions.size(); i++){
+            Question question = selectedQuestions.get(i);
+            System.out.println("\n" + question.getQuestionText());
+
+            for (int j = 0; j < question.getOptions().length; j++) {
+                System.out.println(question.getOptions()[j]);
+            }
+
+            System.out.print("Enter your answer (A/B/C/D): ");
+            char answer = keyboard.nextLine().toUpperCase().charAt(0);  
+
+            if (answer == question.getCorrectAnswer()) {
+                System.out.println("Correct!");
+                score++;  // Increment score for correct answer
+            } else {
+                System.out.println("Wrong! The correct answer is: " + question.getCorrectAnswer());
+            }
+
+        }
+        System.out.println("\nYour final score is: " + score + "/" + selectedQuestions.size());
+        System.out.println("Thanks for playing!");
+        keyboard.close();
 
     }
 }

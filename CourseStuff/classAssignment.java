@@ -1,4 +1,8 @@
+package CourseStuff;
+//Karthik Emani 1325-005
+
 import java.util.Scanner;
+//Karthik Emani 1325-005
 
 public class classAssignment {
     public static void main(String[] args) {
@@ -8,20 +12,23 @@ public class classAssignment {
         int day = keyboard.nextInt();
         boolean isValidDate = false;
 
-        // Check if the month is valid
+        // Validate that the entered month is between 1 and 12
         if (month > 0 && month <= 12) {
             // Check if the day is valid for the given month
             switch (month) {
+                //months with 30 days
                 case 4: case 6: case 9: case 11:
                     if (day > 0 && day <= 30) {
                         isValidDate = true;
                     }
                     break;
+                //feburary with 29 days
                 case 2:
                     if (day > 0 && day <= 29) {
                         isValidDate = true;
                     }
                     break;
+                //months with 31 days
                 default:
                     if (day > 0 && day <= 31) {
                         isValidDate = true;
@@ -30,12 +37,14 @@ public class classAssignment {
             }
         }
 
+        // Print error messages for invalid month or day
         if (month <= 0 || month > 12) {
             System.out.println("Invalid Month!");
         } else if (!isValidDate) {
                 System.out.println("Invalid Day!");
         } else {
-          
+
+          // Determine the zodiac sign based on the date
             if (month == 1 && day >= 20 || month == 2 && day <= 18) {
                 System.out.println("You are Aquarius!");
             } else if (month == 2 && day >= 19 || month == 3 && day <= 20) {
@@ -62,7 +71,7 @@ public class classAssignment {
                 System.out.println("You are Capricorn!");
             }
         }
-
+        // Close the scanner to prevent resource leaks
         keyboard.close();
     }
 }

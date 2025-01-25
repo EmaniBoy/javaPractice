@@ -1,5 +1,5 @@
 package CourseStuff;
-// Karthik Emani 1325-005
+//Karthik Emani 1325-005
 
 import java.util.Scanner;
 
@@ -56,3 +56,4 @@ public class HW1{
         keyboard.close(); 
     }
 }
+//Karthik Emani 1325-005

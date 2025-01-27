@@ -8,43 +8,50 @@ public class HW2 {
         int rounds = 3;
         int compScore = 0;
         int userScore = 0;
-        
 
-        
-        
         System.out.println("Welcome to Rock, Paper, Scissors game!");
+        System.out.println("                                        ");     
+       
         for(int i = 1; i <= rounds; i++){
             int randomInt = random.nextInt(3) + 1;
             String compChoice = "";
             if(randomInt == 1){
-                compChoice = "ROCK";
+                compChoice = "Rock";
             } else if(randomInt == 2) {
-                compChoice = "PAPER";
+                compChoice = "Paper";
             } else if(randomInt == 3){
-                compChoice = "SCISSORS";
+                compChoice = "Scissors";
             }
 
-            System.out.println("round: " + i);
-            System.out.println("Please enter Rock, Paper, or Scissors: ");
+            System.out.println("                                        "); 
+            System.out.println("Round: " + i);
+            System.out.print("Please enter Rock, Paper, or Scissors: ");
             String userChoice = keyboard.nextLine().toUpperCase();
-            System.out.println("your choice is: " + userChoice);
             System.out.println("Computer chose " + compChoice);
 
-            if(compChoice.equals(userChoice)){
-                System.out.println("Its a tie!");
-            } else if(userChoice.equals("ROCK") && compChoice.equals("SCISSOTS") ||
-                        (userChoice.equals("PAPER") && compChoice.equals("ROCK")) ||
-                        (userChoice.equals("SCISSORS") && compChoice.equals("PAPER"))){
-                            System.out.println("You win this round!");
-                            userScore++;
+            if(compChoice.equalsIgnoreCase(userChoice)){
+                System.out.println("It's a tie!");
+            } else if((userChoice.equals("ROCK") && compChoice.equals("Scissors")) ||
+                      (userChoice.equals("PAPER") && compChoice.equals("Rock")) ||
+                      (userChoice.equals("SCISSORS") && compChoice.equals("Paper"))){
+                System.out.println("You win this round!");
+                userScore++;
             } else {
                 System.out.println("Computer wins this round");
                 compScore++;
             }
+            System.out.println("                                        "); 
+
+            if (i == rounds) {
+                System.out.println("Final Scores: ");
+            } else {
+                System.out.println("Current Score: ");
+            }
+            System.out.println("User: " + userScore);
+            System.out.println("Computer: " + compScore);
         }
-        System.out.println("Final Scores: ");
-        System.out.println("You: " + userScore);
-        System.out.println("Compute: " + compScore);
+
+        System.out.println("                                        "); 
 
         if(userScore > compScore){
             System.out.println("You win this game!");
@@ -55,7 +62,5 @@ public class HW2 {
         }
 
         keyboard.close();
-
     }
-    
 }

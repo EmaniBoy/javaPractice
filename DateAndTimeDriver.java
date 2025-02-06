@@ -1,11 +1,10 @@
-import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.ArrayList;
-
-public class HW3 {
+public class DateAndTimeDriver {
     public static void main(String[] args) {
-        Scanner keyboard = new Scanner(System.in);
-        ArrayList<String> map = new ArrayList<String>();
-        System.out.println("hello world");
+    // Creating a new instance of DateAndTimeTester
+    DateAndTimeTester dtTester = new DateAndTimeTester();
+    // Calling the run method from the DateAndTimeTester instance called
+    "dtTester"
+    dtTester.run();
     }
-}   
+    }
+    

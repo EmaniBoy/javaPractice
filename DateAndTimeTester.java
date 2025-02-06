@@ -78,5 +78,14 @@ public class DateAndTimeTester {
         return Integer.parseInt(date.split("/")[1]);
     }
 
+    public int getHour(String time){
+        return Integer.parseInt(time.split(":")[0]);
+    }
+
+    public int getMinute(String time){
+        return Integer.parseInt(time.split(":")[1]);
+    }
+    
     
 }
+

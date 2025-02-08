@@ -1,3 +1,6 @@
+// Karthik Emani 1325-005
+
+package DateAndTime;
 import java.util.Scanner;
 
 public class DateAndTimeTester {
@@ -16,7 +19,7 @@ public class DateAndTimeTester {
             System.out.println("The date and time is invalid");
         }
     }
-
+//Method to check if the input is valid
     public boolean isValid(String input){
         String [] parts = input.split(" ");
         if (parts.length != 2){
@@ -51,7 +54,7 @@ public class DateAndTimeTester {
         return true;
     }
 
-
+//Method to check if the time is valid
     public boolean isValidTime(String time){
         String[] parts = time.split(":");
         if (parts.length != 2){
@@ -69,7 +72,7 @@ public class DateAndTimeTester {
         return true;
     }
 
-
+//Methods to get the month, day, hour, and minute from the date and time
     public int getMonth(String date){
         return Integer.parseInt(date.split("/")[0]);
     } 
@@ -89,3 +92,5 @@ public class DateAndTimeTester {
     
 }
 
+
+// Karthik Emani 1325-005

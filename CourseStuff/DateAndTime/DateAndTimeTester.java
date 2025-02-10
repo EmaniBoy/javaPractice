@@ -1,6 +1,6 @@
 // Karthik Emani 1325-005
 
-package DateAndTime;
+package CourseStuff.DateAndTime;
 import java.util.Scanner;
 
 public class DateAndTimeTester {
@@ -18,6 +18,7 @@ public class DateAndTimeTester {
         } else {
             System.out.println("The date and time is invalid");
         }
+        scanner.close();
     }
 //Method to check if the input is valid
     public boolean isValid(String input){

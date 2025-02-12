@@ -1,3 +1,5 @@
+//Karthik Emani 1325-005
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -32,7 +34,7 @@ public class HW3 {
         
         grid[SIZE - 1][SIZE - 1] = HOME;
 
-        // Place 5 unique random potholes
+        // placing 5 unique random potholes
         int potholeCount = 0;
         while (potholeCount < 5) {
             int x = random.nextInt(SIZE);
@@ -61,12 +63,12 @@ public class HW3 {
         }
     }
 
-    // user input and moves the player
+    // Moves the player and checks if they landed on a pothole or reached home
     private boolean movePlayer(int dx, int dy) {
         int newX = playerX + dx;
         int newY = playerY + dy;
 
-        // Check if move is within bounds
+        
         if (newX < 0 || newX >= SIZE || newY < 0 || newY >= SIZE) {
             System.out.println("Invalid move! Stay within the grid.");
             return false;
@@ -76,13 +78,13 @@ public class HW3 {
         playerX = newX;
         playerY = newY;
 
-        // to check if player landed on a pothole
+        
         if (grid[playerX][playerY] == POTHOLE) {
             System.out.println("OH NO! POTHOLE! You lost!");
             return true;
         }
 
-        // to check if player reached home
+       
         if (playerX == SIZE - 1 && playerY == SIZE - 1) {
             System.out.println("Congratulations! You reached home safely!");
             return true;
@@ -111,7 +113,7 @@ public class HW3 {
             System.out.println("Enter either a -1, 0, or 1 in the Y: ");
             int dy = scanner.nextInt();
 
-            // Validate move
+          
             if ((dx < -1 || dx > 1) || (dy < -1 || dy > 1)) {
                 System.out.println("Invalid input! Enter only -1, 0, or 1.");
                 continue;
@@ -138,3 +140,4 @@ public class HW3 {
         game.playGame();
     }
 }
+//Karthik Emani 1325-005

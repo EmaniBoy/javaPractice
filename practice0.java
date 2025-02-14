@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 import java.util.Random;
 
@@ -28,10 +29,12 @@ public class practice0 {
             System.out.println("Hi, " + name + ". Welcome!");
 
             // Prompt for problem type
+            System.out.println("Select the type of problems you wish to work on:");
             System.out.print("Enter 'A' for addition, 'S' for subtraction, 'M' for multiplication, 'D' for division: ");
             problemType = input.next().toUpperCase();
 
             // Prompt for range of values
+            System.out.println("Enter the range of values for the problems:");
             System.out.print("Enter the lowest value for the problem numbers: ");
             lowRange = input.nextInt();
             

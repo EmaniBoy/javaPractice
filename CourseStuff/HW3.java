@@ -1,3 +1,4 @@
+package CourseStuff;
 //Karthik Emani 1325-005
 
 import java.util.Random;

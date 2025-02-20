@@ -1,3 +1,4 @@
+package CourseStuff;
 import java.util.Scanner;
 
 public class practice1 {
